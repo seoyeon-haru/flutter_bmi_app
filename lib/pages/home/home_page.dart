@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bmi_app/pages/home/widgets/gender_box.dart';
+import 'package:flutter_bmi_app/pages/home/widgets/slider_box.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -7,37 +9,23 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('BMI CALCULATOR'),
       ),
-      body: Column(
-        children: [
-          Container(
-            width: 100,
-            height: 100,
-            decoration: BoxDecoration(
-                border: Border.all(
-              color: Theme.of(context).dividerColor,
-            )),
-          ),
-          Icon(Icons.male),
-          Text('MALE'),
-          Slider(value: 1, onChanged: (v) {}),
-          SizedBox(
-            width: 200,
-            height: 56,
-            child: ElevatedButton(
-              onPressed: () {},
-              child: Text('CALCULATE'),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: Column(
+          children: [
+            GenderBox(),
+            SliderBox(),
+            SliderBox(),
+            SizedBox(
+              width: double.infinity,
+              height: 56,
+              child: ElevatedButton(
+                onPressed: () {},
+                child: Text('CALCULATE'),
+              ),
             ),
-          ),
-          SizedBox(height: 10),
-          SizedBox(
-            width: 200,
-            height: 56,
-            child: OutlinedButton(
-              onPressed: () {},
-              child: Text('RECALCULATE'),
-            ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
