@@ -18,6 +18,7 @@ class HomePage extends StatelessWidget {
           ),
           Icon(Icons.male),
           Text('MALE'),
+          Slider(value: 1, onChanged: (v) {}),
         ],
       ),
     );
