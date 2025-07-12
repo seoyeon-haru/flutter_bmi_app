@@ -5,9 +5,9 @@ class GenderBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        gender(context, Icons.male, 'MALE'),
+        gender(context, Icons.male, 'MALE', true),
         SizedBox(width: 8),
-        gender(context, Icons.female, 'FEMALE'),
+        gender(context, Icons.female, 'FEMALE', false),
       ],
     );
   }
@@ -16,6 +16,7 @@ class GenderBox extends StatelessWidget {
     BuildContext context,
     IconData icon,
     String text,
+    bool selected,
   ) {
     return Expanded(
       child: Container(
@@ -29,19 +30,25 @@ class GenderBox extends StatelessWidget {
             Positioned(
               top: 10,
               left: 10,
-              child: Icon(
-                icon,
-                size: 80,
+              child: Opacity(
+                opacity: 0.3,
+                child: Icon(
+                  icon,
+                  size: 80,
+                ),
               ),
             ),
             Positioned(
               right: 20,
               bottom: 20,
-              child: Text(
-                text,
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
+              child: Opacity(
+                opacity: selected ? 1 : 0.3,
+                child: Text(
+                  text,
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ),
