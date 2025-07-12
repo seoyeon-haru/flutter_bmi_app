@@ -6,6 +6,7 @@ class SliderBox extends StatelessWidget {
     return Column(
       children: [
         Row(
+          crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             Text(
               'HEIGHT',
