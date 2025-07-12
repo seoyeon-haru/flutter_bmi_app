@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.dark,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.pinkAccent,
@@ -40,17 +40,32 @@ class MyApp extends StatelessWidget {
         ),
       ),
       darkTheme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(
-            seedColor: Colors.pinkAccent,
-            brightness: Brightness.dark,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.pinkAccent,
+          brightness: Brightness.dark,
+        ),
+        dividerColor: Colors.white38,
+        sliderTheme: SliderThemeData(
+          thumbColor: Colors.pinkAccent,
+          activeTrackColor: Colors.white30,
+          inactiveTrackColor: Colors.white30,
+          trackHeight: 1,
+        ),
+         elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ButtonStyle(
+            shape: WidgetStatePropertyAll(RoundedRectangleBorder()),
+            backgroundColor: WidgetStatePropertyAll(Colors.pinkAccent),
+            foregroundColor: WidgetStatePropertyAll(Colors.white),
           ),
-          dividerColor: Colors.white38,
-          sliderTheme: SliderThemeData(
-            thumbColor: Colors.pinkAccent,
-            activeTrackColor: Colors.white30,
-            inactiveTrackColor: Colors.white30,
-            trackHeight: 1,
-          )),
+        ),
+        outlinedButtonTheme: OutlinedButtonThemeData(
+          style: ButtonStyle(
+            shape: WidgetStatePropertyAll(RoundedRectangleBorder()),
+            side: WidgetStatePropertyAll(BorderSide(color: Colors.white30)),
+            foregroundColor: WidgetStatePropertyAll(Colors.white),
+          ),
+        ),
+      ),
       home: HomePage(),
     );
   }
