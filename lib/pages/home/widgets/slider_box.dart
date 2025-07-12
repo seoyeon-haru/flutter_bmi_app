@@ -5,11 +5,14 @@ class SliderBox extends StatelessWidget {
     required this.label,
     required this.value,
     required this.unit,
+    required this.onChanged,
   });
 
   String label;
   double value;
   String unit;
+  void Function(double newValue) onChanged;
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -34,7 +37,7 @@ class SliderBox extends StatelessWidget {
         ),
         Slider(
           value: value,
-          onChanged: (v) {},
+          onChanged: onChanged,
           min: 1,
           max: 300,
         )
