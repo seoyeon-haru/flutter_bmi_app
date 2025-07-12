@@ -2,7 +2,33 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bmi_app/pages/home/widgets/gender_box.dart';
 import 'package:flutter_bmi_app/pages/home/widgets/slider_box.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+
+  bool isMale = true;
+  void onGenderChanged(bool male) {
+    setState(() {
+      isMale = male;
+    });
+  }
+  double height = 170;
+  void onHeightChanged(double newHeight) {
+    setState(() {
+      height = newHeight;
+    });
+  }
+  double weight = 70;
+  void onWeightChanged(double newWeight) {
+    setState(() {
+      weight = newWeight;
+    });
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
