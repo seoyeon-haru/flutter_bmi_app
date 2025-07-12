@@ -7,10 +7,19 @@ class SliderBox extends StatelessWidget {
       children: [
         Row(
           children: [
-            Text('HEIGHT'),
+            Text(
+              'HEIGHT',
+              style: TextStyle(fontSize: 20),
+            ),
             Spacer(),
-            Text('170'),
-            Text('cm'),
+            Text(
+              '170',
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+            ),
+            Text(
+              'cm',
+              style: TextStyle(fontSize: 20),
+            ),
           ],
         ),
         Slider(
