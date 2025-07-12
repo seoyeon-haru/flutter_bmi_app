@@ -8,26 +8,26 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-
   bool isMale = true;
   void onGenderChanged(bool male) {
     setState(() {
       isMale = male;
     });
   }
+
   double height = 170;
   void onHeightChanged(double newHeight) {
     setState(() {
       height = newHeight;
     });
   }
+
   double weight = 70;
   void onWeightChanged(double newWeight) {
     setState(() {
       weight = newWeight;
     });
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -41,9 +41,19 @@ class _HomePageState extends State<HomePage> {
           children: [
             GenderBox(isMale, onGenderChanged),
             Spacer(),
-            SliderBox(label: 'HEIGHT', value: height, unit: 'cm'),
+            SliderBox(
+              label: 'HEIGHT',
+              value: height,
+              unit: 'cm',
+              onChanged: onHeightChanged,
+            ),
             Spacer(),
-            SliderBox(label: 'WEIGHT', value: weight, unit: 'kg'),
+            SliderBox(
+              label: 'WEIGHT',
+              value: weight,
+              unit: 'kg',
+              onChanged: onWeightChanged,
+            ),
             Spacer(),
             SizedBox(
               width: double.infinity,
