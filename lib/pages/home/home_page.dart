@@ -10,7 +10,7 @@ class HomePage extends StatelessWidget {
         title: Text('BMI CALCULATOR'),
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
+        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 50),
         child: Column(
           children: [
             GenderBox(),
