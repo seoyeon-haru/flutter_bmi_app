@@ -1,6 +1,15 @@
 import 'package:flutter/material.dart';
 
 class SliderBox extends StatelessWidget {
+  SliderBox({
+    required this.label,
+    required this.value,
+    required this.unit,
+  });
+
+  String label;
+  double value;
+  String unit;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -9,16 +18,16 @@ class SliderBox extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             Text(
-              'HEIGHT',
+              label,
               style: TextStyle(fontSize: 20),
             ),
             Spacer(),
             Text(
-              '170',
+              value.toStringAsFixed(0),
               style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
             ),
             Text(
-              'cm',
+              unit,
               style: TextStyle(fontSize: 20),
             ),
           ],

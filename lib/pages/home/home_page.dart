@@ -14,8 +14,8 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: [
             GenderBox(),
-            SliderBox(),
-            SliderBox(),
+            SliderBox(label: 'HEIGHT', value: 170, unit: 'cm'),
+            SliderBox(label: 'WEIGHT', value: 70, unit: 'kg'),
             SizedBox(
               width: double.infinity,
               height: 56,
