@@ -3,7 +3,12 @@ import 'package:flutter/material.dart';
 class SliderBox extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return Text('SliderBox');
+    return Column(
+      children: [
+        Row(),
+        Slider(value: 170, onChanged: (v) {}, min: 1, max: 300,)
+      ],
+    );
   }
 
 }
