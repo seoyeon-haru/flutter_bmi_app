@@ -27,27 +27,30 @@ class MyApp extends StatelessWidget {
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ButtonStyle(
             shape: WidgetStatePropertyAll(RoundedRectangleBorder()),
+            backgroundColor: WidgetStatePropertyAll(Colors.pinkAccent),
+            foregroundColor: WidgetStatePropertyAll(Colors.white),
           ),
         ),
         outlinedButtonTheme: OutlinedButtonThemeData(
           style: ButtonStyle(
             shape: WidgetStatePropertyAll(RoundedRectangleBorder()),
+            side: WidgetStatePropertyAll(BorderSide(color: Colors.black38)),
+            foregroundColor: WidgetStatePropertyAll(Colors.black),
           ),
         ),
       ),
       darkTheme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.pinkAccent,
-          brightness: Brightness.dark,
-        ),
-        dividerColor: Colors.white38,
-        sliderTheme: SliderThemeData(
-          thumbColor: Colors.pinkAccent,
-          activeTrackColor: Colors.white30,
-          inactiveTrackColor: Colors.white30,
-          trackHeight: 1,
-        )
-      ),
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: Colors.pinkAccent,
+            brightness: Brightness.dark,
+          ),
+          dividerColor: Colors.white38,
+          sliderTheme: SliderThemeData(
+            thumbColor: Colors.pinkAccent,
+            activeTrackColor: Colors.white30,
+            inactiveTrackColor: Colors.white30,
+            trackHeight: 1,
+          )),
       home: HomePage(),
     );
   }
