@@ -12,13 +12,22 @@ class HomePage extends StatelessWidget {
           Container(
             width: 100,
             height: 100,
-            decoration: BoxDecoration(border: Border.all(
+            decoration: BoxDecoration(
+                border: Border.all(
               color: Theme.of(context).dividerColor,
             )),
           ),
           Icon(Icons.male),
           Text('MALE'),
           Slider(value: 1, onChanged: (v) {}),
+          ElevatedButton(
+            onPressed: () {},
+            child: Text('CALCULATE'),
+          ),
+          OutlinedButton(
+            onPressed: () {},
+            child: Text('RECALCULATE'),
+          ),
         ],
       ),
     );
