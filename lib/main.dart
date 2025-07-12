@@ -23,7 +23,17 @@ class MyApp extends StatelessWidget {
           activeTrackColor: Colors.black38,
           inactiveTrackColor: Colors.black38,
           trackHeight: 1,
-        )
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ButtonStyle(
+            shape: WidgetStatePropertyAll(RoundedRectangleBorder()),
+          ),
+        ),
+        outlinedButtonTheme: OutlinedButtonThemeData(
+          style: ButtonStyle(
+            shape: WidgetStatePropertyAll(RoundedRectangleBorder()),
+          ),
+        ),
       ),
       darkTheme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
