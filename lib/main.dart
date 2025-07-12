@@ -18,6 +18,12 @@ class MyApp extends StatelessWidget {
           brightness: Brightness.light,
         ),
         dividerColor: Colors.black38,
+        sliderTheme: SliderThemeData(
+          thumbColor: Colors.pinkAccent,
+          activeTrackColor: Colors.black38,
+          inactiveTrackColor: Colors.black38,
+          trackHeight: 1,
+        )
       ),
       darkTheme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
@@ -25,6 +31,12 @@ class MyApp extends StatelessWidget {
           brightness: Brightness.dark,
         ),
         dividerColor: Colors.white38,
+        sliderTheme: SliderThemeData(
+          thumbColor: Colors.pinkAccent,
+          activeTrackColor: Colors.white30,
+          inactiveTrackColor: Colors.white30,
+          trackHeight: 1,
+        )
       ),
       home: HomePage(),
     );
