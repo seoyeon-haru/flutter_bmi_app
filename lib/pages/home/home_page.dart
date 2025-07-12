@@ -20,13 +20,22 @@ class HomePage extends StatelessWidget {
           Icon(Icons.male),
           Text('MALE'),
           Slider(value: 1, onChanged: (v) {}),
-          ElevatedButton(
-            onPressed: () {},
-            child: Text('CALCULATE'),
+          SizedBox(
+            width: 200,
+            height: 56,
+            child: ElevatedButton(
+              onPressed: () {},
+              child: Text('CALCULATE'),
+            ),
           ),
-          OutlinedButton(
-            onPressed: () {},
-            child: Text('RECALCULATE'),
+          SizedBox(height: 10),
+          SizedBox(
+            width: 200,
+            height: 56,
+            child: OutlinedButton(
+              onPressed: () {},
+              child: Text('RECALCULATE'),
+            ),
           ),
         ],
       ),
