@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bmi_app/pages/result/widgets/result_gauge.dart';
+import 'package:flutter_bmi_app/pages/result/widgets/result_text.dart';
 
 class ResultPage extends StatelessWidget {
   ResultPage(this.bmi);
@@ -14,10 +16,14 @@ class ResultPage extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           children: [
+            ResultGauge(bmi),
+            ResultText(),
             SizedBox(
               width: double.infinity,
               height: 56,
-              child: OutlinedButton(onPressed: () {}, child: Text('RECALCULATE'),
+              child: OutlinedButton(
+                onPressed: () {},
+                child: Text('RECALCULATE'),
               ),
             ),
           ],
