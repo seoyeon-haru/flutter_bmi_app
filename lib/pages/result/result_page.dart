@@ -17,7 +17,7 @@ class ResultPage extends StatelessWidget {
         child: Column(
           children: [
             ResultGauge(bmi),
-            ResultText(),
+            ResultText(bmi),
             SizedBox(
               width: double.infinity,
               height: 56,
