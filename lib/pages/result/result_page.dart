@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
 class ResultPage extends StatelessWidget {
+  ResultPage(this.bmi);
+
+  double bmi;
   @override
   Widget build(BuildContext context) {
-    final bmi = ModalRoute.of(context)?.settings.arguments;
     return Scaffold(
       appBar: AppBar(
         title: Text('BMI CALCULATOR'),
