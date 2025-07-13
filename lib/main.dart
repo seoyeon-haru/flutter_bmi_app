@@ -1,5 +1,4 @@
 import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bmi_app/pages/home/home_page.dart';
 import 'package:flutter_bmi_app/theme.dart';
@@ -14,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      themeMode: ThemeMode.light,
+      themeMode: ThemeMode.system,
       theme: lightTheme,
       darkTheme: darkTheme,
       home: HomePage(),
