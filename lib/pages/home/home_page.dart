@@ -63,9 +63,15 @@ class _HomePageState extends State<HomePage> {
                 onPressed: () {
                   final meterHeight = height / 100;
                   final bmi = (meterHeight * meterHeight);
-                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return ResultPage();
-                 }));
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return ResultPage();
+                      },
+                      settings: RouteSettings(arguments: bmi),
+                    ),
+                  );
                 },
                 child: Text('CALCULATE'),
               ),
