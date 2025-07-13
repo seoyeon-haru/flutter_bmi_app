@@ -59,7 +59,11 @@ class _HomePageState extends State<HomePage> {
               width: double.infinity,
               height: 56,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  final meterHeight = height / 100;
+                  final bmi = (meterHeight * meterHeight);
+                 print('BMI $bmi');
+                },
                 child: Text('CALCULATE'),
               ),
             ),
