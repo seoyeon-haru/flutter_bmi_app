@@ -16,8 +16,11 @@ class ResultPage extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           children: [
+            Spacer(),
             ResultGauge(bmi),
+            SizedBox(height: 50),
             ResultText(bmi),
+            Spacer(),
             SizedBox(
               width: double.infinity,
               height: 56,
@@ -26,6 +29,7 @@ class ResultPage extends StatelessWidget {
                 child: Text('RECALCULATE'),
               ),
             ),
+            SizedBox(height: 50),
           ],
         ),
       ),
