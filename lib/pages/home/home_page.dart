@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bmi_app/pages/home/widgets/gender_box.dart';
 import 'package:flutter_bmi_app/pages/home/widgets/slider_box.dart';
+import 'package:flutter_bmi_app/pages/result/result_page.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -62,7 +63,9 @@ class _HomePageState extends State<HomePage> {
                 onPressed: () {
                   final meterHeight = height / 100;
                   final bmi = (meterHeight * meterHeight);
-                 print('BMI $bmi');
+                 Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return ResultPage();
+                 }));
                 },
                 child: Text('CALCULATE'),
               ),
